@@ -1,0 +1,32 @@
+/* Seu arquivo CSS principal (ex: src/index.css) */
+
+@import "tailwindcss";
+
+:root {
+  /* Cor Principal: #1a5775 (É o 700 na escala abaixo) */
+  --color-primary-50: #f0f6f9;
+  --color-primary-100: #e2eef4;
+  --color-primary-200: #c0dfea;
+  --color-primary-300: #93c8db;
+  --color-primary-400: #62adcd;
+  --color-primary-500: #3b8eb5;
+  --color-primary-600: #256f93;
+  --color-primary-700: #1a5775; /* O seu #1a5775 */
+  --color-primary-800: #15455d;
+  --color-primary-900: #103447;
+  --color-primary-950: #0c212c;
+
+  /* Cor Secundária (Branco Puro): #fff */
+  --color-white: #fff;
+  /* (O Tailwind já tem o white, mas garantir é bom) */
+
+  /* --- Cores Adicionais (Bônus) --- */
+
+  /* Você pode adicionar um nome mais amigável para sua cor principal,
+     ex: um "dark-teal" se quiser usar classes como bg-dark-teal-700 */
+  --color-dark-teal-700: #1a5775;
+  --color-dark-teal-500: #3b8eb5;
+
+  /* E para o branco, basta usar o 'white' padrão ou criar um 'light' se quiser */
+  --color-light: #fff;
+}
