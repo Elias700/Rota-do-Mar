@@ -1,4 +1,5 @@
 /* Seu arquivo CSS principal (ex: src/index.css) */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Protest+Revolution&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -29,4 +30,14 @@
 
   /* E para o branco, basta usar o 'white' padrão ou criar um 'light' se quiser */
   --color-light: #fff;
+
+  --font-title: 'sans': ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'];
+  --font-destaque: ['Oswald', 'sans-serif'];
+  --font-chamativa: ['Protest Revolution', 'sans-serif'];
 }
+
+
+        
+        
+        
+        
