@@ -1,6 +1,10 @@
 import Logo from '../../assets/logo.png'
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
     return (
         <header>
             <div className="bg-[var(--color-primary-600)] flex justify-around items-center p-5 shadow-2xl">
@@ -14,8 +18,8 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className='[&>button]:text-[var(--color-primary-900)] flex gap-5'>
-                    <button className='bg-[var(--color-primary-50)] py-3 px-5 rounded-4xl text-2xl cursor-pointer font-semibold shadow-md transition-colors hover:bg-[var(--color-primary-800)] hover:text-[var(--color-primary-50)] duration-[500ms]'>Login</button>
-                    <button className='bg-[var(--color-primary-50)] py-3 px-5 rounded-4xl text-2xl cursor-pointer font-semibold shadow-md transition-colors  hover:bg-[var(--color-primary-800)] hover:text-[var(--color-primary-50)] duration-[500ms] '>Cadastro</button>
+                    <button onClick={() => navigate("/login")} className='bg-[var(--color-primary-50)] py-3 px-5 rounded-4xl text-2xl cursor-pointer font-semibold shadow-md transition-colors hover:bg-[var(--color-primary-800)] hover:text-[var(--color-primary-50)] duration-[500ms]'>Login</button>
+                    <button onClick={() => navigate("/cadastro")} className='bg-[var(--color-primary-50)] py-3 px-5 rounded-4xl text-2xl cursor-pointer font-semibold shadow-md transition-colors  hover:bg-[var(--color-primary-800)] hover:text-[var(--color-primary-50)] duration-[500ms] '>Cadastro</button>
                 </div>
             </div>
         </header>
