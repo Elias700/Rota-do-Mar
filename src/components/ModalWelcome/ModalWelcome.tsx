@@ -28,7 +28,7 @@ const ModalWelcome: React.FC<ModalWelcomeProps> = ({ isOpen, onClose, children }
       >
         {/* Botão de Fechar: Posição absoluta no canto superior direito */}
         <button 
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl leading-none font-semibold" 
+          className="absolute top-3 right-3 text-[var(--color-primary-900)] hover:text-[var(--color-primary-600)] text-4xl leading-none font-semibold cursor-pointer" 
           onClick={onClose}
         >
           &times;

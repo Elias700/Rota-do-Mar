@@ -2,8 +2,8 @@ import BeachVideo from "../../assets/video-beach.mp4";
 
 function Home() {
   return (
-    <div>
-      <div className="relative w-full h-[85vh] overflow-hidden">
+    <main>
+      <section className="relative w-full h-[100vh] overflow-hidden">
         <video
           src={BeachVideo}
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -23,15 +23,18 @@ function Home() {
             completas sobre cada praia.
           </p>
           <input
-            className="bg-zinc-200 text-zinc-600 font-mono ring-1 w-100 ring-zinc-400 focus:ring-2 focus:ring-[var(--color-primary-600)] outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-1 shadow-md focus:shadow-lg focus:shadow-blue-300"
+            className="bg-zinc-200 text-zinc-600 font-mono ring-1 w-100
+            ring-zinc-400 focus:ring-2 focus:ring-[var(--color-primary-600)]
+            outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50
+            rounded-full px-4 py-1 shadow-md focus:shadow-lg focus:shadow-blue-300"
             placeholder="Pesquise sua praia preferida"
             name="text"
             type="text"
           />
 
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
