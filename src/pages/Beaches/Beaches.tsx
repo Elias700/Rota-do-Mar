@@ -27,14 +27,13 @@ const Beaches: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='pb-30'>
       <h1 
         className='text-4xl text-center text-[var(--color-primary-700)] font-bold p-10'
       >
         Praias
       </h1>
       
-      {/* Container dos Cards */}
       <div className="flex flex-wrap gap-6 justify-center"> 
         {visibleBeaches.map((beach: Beach) => (
           <BeachCard 
@@ -44,13 +43,14 @@ const Beaches: React.FC = () => {
         ))}
       </div>
 
-      {/* Botão Ver Mais (só aparece se houver mais cards) */}
       {hasMore && (
-        <div className="flex justify-center p-10">
+        <div className="flex justify-center">
           <button
             onClick={handleLoadMore}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 
-            rounded-full shadow-lg transition duration-300 ease-in-out"
+            className="
+              bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-800)]
+              text-[var(--color-primary-50)] font-bold py-2 px-6 mt-10 
+              rounded-full shadow-lg transition duration-300 ease-in-out cursor-pointer"
           >
             Mostrar Todas as Praias ({beaches.length - visibleCount} restantes)
           </button>
