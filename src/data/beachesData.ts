@@ -16,25 +16,25 @@ export const beaches: Beach[] = [
     {
       id: 2,
       name: 'Praia do Porto da Barra',
-      imageUrl: 'https://imageUrls.pexels.com/photos/13733832/pexels-photo-13733832.jpeg',
+      imageUrl: 'https://www.costadosauipe.com.br/images/news/0478/porto_da_barra_4.jpg',
       description: 'Conhecida por seu pôr do sol espetacular e águas tranquilas e prazerosa.'
     },
     {
       id: 3,
       name: 'Praia de Stella Maris',
-      imageUrl: 'https://imageUrls.pexels.com/photos/3765562/pexels-photo-3765562.jpeg',
+      imageUrl: 'https://imgmd.net/images/v1/guia/1713837/praia-de-stella-maris.jpg',
       description: 'Com ondas fortes e extensa faixa de areia, é perfeita para a prática de surf e caminhadas.'
     },
     {
       id: 4,
       name: 'Praia de Itapoã',
-      imageUrl: 'https://imageUrls.pexels.com/photos/23605138/pexels-photo-23605138.jpeg',
+      imageUrl: 'https://turismo.itapoa.sc.gov.br/uploads/sites/108/2022/10/2442827-scaled.jpg',
       description: 'Cenário de canções e poemas, é uma praia com coqueiros e areia clara, ideal para relaxar e aproveitar a paisagem.'
     },
     {
       id: 5,
       name: 'Praia do Rio Vermelho',
-      imageUrl: 'https://imageUrls.pexels.com/photos/28500818/pexels-photo-28500818.jpeg',
+      imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a8/0c/53/caption.jpg?w=1200&h=-1&s=1',
       description: 'Localizada em um bairro boêmio, é conhecida por sua vida noturna, culinária e festas religiosas.'
     },
     {
@@ -58,13 +58,13 @@ export const beaches: Beach[] = [
     {
       id: 9,
       name: 'Praia Jardim de Alá',
-      imageUrl: 'https://www.guiaviagensbrasil.com/imageUrlns/foto-da-praia-jardim-de-alah-em-salvador-bahia-brasil-2257.jpg',
+      imageUrl: 'https://www.guiaviagensbrasil.com/imagens/praia-jardim-de-ala-salvador-ba-9391.jpg',
       description: 'Uma praia urbanizada, com ciclovia e calçadão, excelente para quem busca atividades ao ar livre.'
     },
     {
       id: 10,
       name: 'Praia de Piatã',
-      imageUrl: 'https://www.guiaviagensbrasil.com/imageUrlns/foto-praia-pieta-salvador-bahia-brasil-9425.jpg',
+      imageUrl: 'https://static.wixstatic.com/media/954288_a14ec97c9bd04a03ac0f1b1a4d98e986~mv2.jpg/v1/fill/w_500,h_281,al_c,q_80,enc_auto/954288_a14ec97c9bd04a03ac0f1b1a4d98e986~mv2.jpg',
       description: 'Com extensa faixa de areia, é uma das praias mais frequentadas de Salvador, ponto importante.'
     },
     {
