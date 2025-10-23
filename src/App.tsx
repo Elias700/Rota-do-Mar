@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import Welcome from './pages/Welcome/Welcome';
 import Beaches from './pages/Beaches/Beaches';
 import Footer from './components/Footer/Footer';
+import Weather from './pages/Weather/Weather';
 
 import './App.css';
 
@@ -14,6 +15,7 @@ function App() {
         <Home />
         <Welcome />
         <Beaches />
+        <Weather />
         <Footer />
       </main>
     </>

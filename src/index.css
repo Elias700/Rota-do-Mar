@@ -22,7 +22,7 @@
   /* (O Tailwind já tem o white, mas garantir é bom) */
 
   /* --- Cores Adicionais (Bônus) --- */
-
+  --color-error: #e53e3e; /* Vermelho para erros */
   /* Você pode adicionar um nome mais amigável para sua cor principal,
      ex: um "dark-teal" se quiser usar classes como bg-dark-teal-700 */
   --color-dark-teal-700: #1a5775;
