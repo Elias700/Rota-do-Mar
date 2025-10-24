@@ -27,7 +27,7 @@ const Beaches: React.FC = () => {
   };
 
   return (
-    <div className='pb-30'>
+    <div id='praias' className='pb-30'>
       <h1 
         className='text-4xl text-center text-[var(--color-primary-700)] font-bold p-10'
       >

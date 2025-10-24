@@ -68,7 +68,7 @@ if (error) {
 }
 
 return (
-    <div className="w-full p-20 flex justify-center">
+    <div id="tempo" className="w-full p-20 flex justify-center">
         <div className="bg-white rounded-2xl max-w-lg w-full shadow-xl overflow-hidden font-sans">
             <h1 className="text-3xl font-destaque font-bold text-center text-[var(--color-primary-700)] mb-4" >
                 Previsão do Tempo

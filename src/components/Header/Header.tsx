@@ -5,27 +5,35 @@ const Header = () => {
     const navigate = useNavigate();
 
     return (
-        // Adicione as classes 'fixed', 'top-0', 'w-full' e 'z-50' aqui
         <header className="fixed top-0 w-full z-50">
             <div className="bg-[var(--color-primary-600)] flex justify-around items-center p-2 shadow-2xl">
                 <img src={Logo} alt="Logo Rota do Mar" className='h-20'/>
                 <nav className='flex'>
                     <ul className="flex gap-10">
                         <li className="text-[var(--color-primary-50)] text-2xl cursor-pointer relative group w-max">
-                            <span className="relative z-10">Home</span>
-                            <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           <a href="#home">
+                                <span className="relative z-10">Home</span>
+                                <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full">
+                                </span>
+                           </a>
                         </li>
                         <li className="text-[var(--color-primary-50)] text-2xl cursor-pointer relative group w-max">
-                            <span className="relative z-10">Praias</span>
-                            <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           <a href="#praias">
+                                <span className="relative z-10">Praias</span>
+                                <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           </a>
                         </li>
                         <li className="text-[var(--color-primary-50)] text-2xl cursor-pointer relative group w-max">
-                            <span className="relative z-10">Previsão do Tempo</span>
-                            <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           <a href="#tempo">
+                                <span className="relative z-10">Previsão do Tempo</span>
+                                <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           </a>
                         </li>
                         <li className="text-[var(--color-primary-50)] text-2xl cursor-pointer relative group w-max">
-                            <span className="relative z-10">Contato</span>
-                            <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           <a href="#contato">
+                                <span className="relative z-10">Contato</span>
+                                <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-[var(--color-primary-50)] group-hover:w-full"></span>
+                           </a>
                         </li>
                     </ul>
                 </nav>

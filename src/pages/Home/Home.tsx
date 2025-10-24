@@ -3,7 +3,7 @@ import BeachVideo from "../../assets/video-beach.mp4";
 function Home() {
   return (
     <main>
-      <section className="relative w-full h-[100vh] overflow-hidden">
+      <section id="home" className="relative w-full h-[100vh] overflow-hidden">
         <video
           src={BeachVideo}
           className="absolute top-0 left-0 w-full h-full object-cover"
