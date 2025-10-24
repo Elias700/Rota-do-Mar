@@ -9,19 +9,19 @@ import BeachesDetail from './pages/BeachesDetail/BeachesDetail';
 
 const router = createBrowserRouter([
   {
-    path: "/",        // Página inicial
+    path: "/",        
     element: <App />,
   },
   {
-    path: "/login",   // Página de login separada
+    path: "/login",   
     element: <SignIn />,
   },
   {
-    path: "/cadastro", // Página de cadastro separada
+    path: "/cadastro", 
     element: <SignUp />,
   },
   {
-    path: "/beaches/:id", // Página de detalhes da praia
+    path: "/beaches/:id", 
     element: <BeachesDetail />,
   },
 ]);

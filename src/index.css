@@ -1,10 +1,9 @@
-/* Seu arquivo CSS principal (ex: src/index.css) */
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Protest+Revolution&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
 :root {
-  /* Cor Principal: #1a5775 (É o 700 na escala abaixo) */
   --color-primary-50: #f0f6f9;
   --color-primary-100: #e2eef4;
   --color-primary-200: #c0dfea;
@@ -12,24 +11,23 @@
   --color-primary-400: #62adcd;
   --color-primary-500: #3b8eb5;
   --color-primary-600: #256f93;
-  --color-primary-700: #1a5775; /* O seu #1a5775 */
+  --color-primary-700: #1a5775; 
   --color-primary-800: #15455d;
   --color-primary-900: #103447;
   --color-primary-950: #0c212c;
 
-  /* Cor Secundária (Branco Puro): #fff */
   --color-white: #fff;
-  /* (O Tailwind já tem o white, mas garantir é bom) */
+  
+  --color-desabled: #6f818b;
 
-  /* --- Cores Adicionais (Bônus) --- */
-  --color-error: #e53e3e; /* Vermelho para erros */
-  /* Você pode adicionar um nome mais amigável para sua cor principal,
-     ex: um "dark-teal" se quiser usar classes como bg-dark-teal-700 */
+  --color-error: #e53e3e;
+  --color-success: #38a169;
+  --color-warning: #dd6b20;
+  
   --color-dark-teal-700: #1a5775;
   --color-dark-teal-500: #3b8eb5;
 
-  /* E para o branco, basta usar o 'white' padrão ou criar um 'light' se quiser */
-  --color-light: #fff;
+  --color-light: #fffffff1;
 
   --font-title: 'sans': ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'];
   --font-destaque: ['Oswald', 'sans-serif'];

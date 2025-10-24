@@ -4,6 +4,7 @@ import Welcome from './pages/Welcome/Welcome';
 import Beaches from './pages/Beaches/Beaches';
 import Footer from './components/Footer/Footer';
 import Weather from './pages/Weather/Weather';
+import Contact from './pages/Contact/Contact';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Welcome />
         <Beaches />
         <Weather />
+        <Contact />
         <Footer />
       </main>
     </>
