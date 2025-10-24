@@ -5,6 +5,7 @@ import App from './App';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import './index.css';
+import BeachesDetail from './pages/BeachesDetail/BeachesDetail';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/cadastro", // Página de cadastro separada
     element: <SignUp />,
+  },
+  {
+    path: "/beaches/:id", // Página de detalhes da praia
+    element: <BeachesDetail />,
   },
 ]);
 
