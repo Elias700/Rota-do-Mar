@@ -16,9 +16,9 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
  // Se beach.imageUrl for um array, pegamos o primeiro elemento (índice 0)
  // Se por algum motivo ainda for uma string (caso não tenha atualizado todos os dados), ele pega o valor direto.
  // Nota: Como a interface Beach foi atualizada, o TypeScript garantirá que seja um array.
- const primaryImageUrl = Array.isArray(beach.imageUrl) 
-    ? beach.imageUrl[0] 
-    : beach.imageUrl;
+//  const primaryImageUrl = Array.isArray(beach.imageUrl) 
+//     ? beach.imageUrl[0] 
+//     : beach.imageUrl;
  
  // Note: Se você atualizou a interface para string[], o `Array.isArray` pode não ser estritamente necessário 
  // mas o código abaixo é o que precisa ser ajustado:
@@ -43,7 +43,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
           {beach.name}
          </h4>
          <p className="text-sm font-normal text-[var(--color-primary-500)] transition-all duration-500 leading-5 mb-5 flex-grow"> 
-          {beach.description} 
+          {beach.descriptionCard} 
          </p>
          <button 
           onClick={handleCardClick} 

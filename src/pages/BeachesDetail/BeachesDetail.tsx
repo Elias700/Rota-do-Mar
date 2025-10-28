@@ -25,7 +25,7 @@ const BeachesDetail: React.FC = () => {
         slidesToShow: 1, // Mostra 1 slide por vez
         slidesToScroll: 1,
         autoplay: true, // Opcional: passa as fotos automaticamente
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3000,
     };
 
     return (
@@ -36,43 +36,82 @@ const BeachesDetail: React.FC = () => {
                   <Link to="/" className='text-[var(--color-primary-600)] hover:underline p-10 font-medium cursor-pointer'>
                       Voltar para Página principal
                   </Link>
-                  <h1 className='text-[var(--color-primary-700)] text-4xl text-center font-bold p-5'>
+                  <h1 className='text-[var(--color-primary-700)] text-4xl text-center font-bold p-10'>
                       {beach.name}
                   </h1>
 
-                  {/* 3. AQUI ESTÁ O NOVO CARROSSEL */}
+                  {/*CARROSSEL */}
                   <div className="max-w-4xl mx-auto mb-10"> 
                       <Slider {...settings}>
-                          {/* Mapeia a lista de URLs da praia */}
+                         
                           {beach.imageUrl.map((url, index) => (
                               <div key={index}>
                                   <img 
                                       src={url} 
                                       alt={`${beach.name} - Foto ${index + 1}`}
-                                      // Use classes de estilo para garantir que a imagem se ajuste ao container
                                       className='w-full h-96 object-cover rounded-lg' 
                                   />
                               </div>
                           ))}
                       </Slider>
                   </div>
-                  {/* ------------------------------- */}
 
                   <div className='max-w-5xl mx-auto p-6'>
-                      <p className='mb-6'>
-                          **Descrição:** {beach.description}
-                      </p>
-                      <div className="mb-8 bg-blue-50 border border-blue-200 rounded-xl p-4 shadow">
-                          <h2 className="text-xl font-semibold text-gray-700 mb-2">🌦️ Clima atual</h2>
-                          <p className="text-gray-700">nuvens dispersas | 26°C</p>
-                          <p className="text-gray-600">Vento: 18 km/h | Chuva: 42%</p>
-                      </div>
-                      <div className="mb-8 bg-green-50 border border-green-200 rounded-xl p-4 shadow">
-                          <h2 className="text-xl font-semibold text-gray-700 mb-2">🌊 Maré</h2>
-                          <p className="text-gray-700">Maré agora: Baixa</p>
-                          <p className="text-gray-600">Próxima mudança: Cheia às 15:00</p>
-                      </div>
-                  </div>
+                        <p className='mb-6 text-[var(--color-primary-800)] text-lg '>
+                            {beach.description}
+                        </p>
+                        <div 
+                            className="mb-8 bg-[var(--color-background-card-blue)] 
+                            rounded-xl p-4 shadow cursor-pointer 
+                            hover:bg-blue-100 hover:border-blue-300 hover:shadow-lg 
+                            hover:scale-[1.01] transition-all duration-300"
+                        >
+                            <h2 
+                                className="text-xl font-semibold text-[var(--color-primary-700)] mb-2">
+                                    🌦️ Clima atual
+                            </h2>
+                            <p 
+                                className="text-[var(--color-primary-900)]">
+                                nuvens dispersas | 
+                                <strong className='text-[var(--color-primary-700)] ml-1'>
+                                    26°C
+                                </strong>
+                            </p>
+                            <p 
+                                className="text-[var(--color-primary-900)]">
+                                Vento: 
+                                <strong className='text-[var(--color-primary-700)]'>
+                                    18 km/h | Chuva: 42%
+                                </strong>
+                            </p>
+                        </div>
+                        <div 
+                            className="mb-8 bg-[var(--color-background-card-green)]
+                            rounded-xl p-4 shadow cursor-pointer 
+                            hover:bg-green-100 hover:border-green-300 hover:shadow-lg 
+                            hover:scale-[1.01] transition-all duration-300"
+                        >
+                            <h2 className="text-xl font-semibold text-[var(--color-primary-700)] mb-2">🌊 Maré</h2>
+                            <p 
+                                className="text-[var(--color-primary-900)]">
+                                    Maré agora: 
+                                <strong 
+                                    className='text-[var(--color-primary-600)] ml-1'
+                                >
+                                    Baixa
+                                </strong>
+                            </p>
+                            <p 
+                                className="text-[var(--color-primary-900)] ">   
+                                Próxima mudança:
+                                <strong 
+                                    className='text-[var(--color-primary-600)] ml-1'
+                                >
+                                     Cheia às 15:00
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
               </div>
             <Footer />
         </div>

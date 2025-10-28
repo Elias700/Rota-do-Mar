@@ -29,6 +29,10 @@
 
   --color-light: #fffffff1;
 
+  --color-background-card-blue: #BFDBFE;
+  --color-background-card-green: #BBF7D0;
+  
+
   --font-title: 'sans': ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'];
   --font-destaque: ['Oswald', 'sans-serif'];
   --font-chamativa: ['Protest Revolution', 'sans-serif'];
