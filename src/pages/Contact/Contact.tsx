@@ -1,8 +1,7 @@
-
 const Contact = () => {
 
     return (
-        <form className="h-[100vh] flex flex-col items-center justify-center bg-[var(--color-light)]">
+        <form id="contato" className="h-[100vh] flex flex-col items-center justify-center bg-[var(--color-light)]">
                 <h1 className="text-center text-4xl text-[var(--color-primary-700)] font-bold p-10">Contato</h1>
                 <div className="flex flex-col w-full max-w-xs sm:max-w-md p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
                     <div className="flex flex-col gap-4">
@@ -41,7 +40,7 @@ const Contact = () => {
                             <textarea
                                 name="mensagem" 
                                 id="mensagem" 
-                                rows="4" 
+                                rows={4} 
                                 placeholder="Digite sua mensagem" 
                                 className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full" 
                                 required
