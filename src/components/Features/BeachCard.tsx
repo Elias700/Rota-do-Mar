@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Beach } from '../../data/beachesData'; 
+import { useAuth } from '../../contexts/AuthContext';
+import { useFavorites } from '../../contexts/FavoritesContext';
 
 interface BeachCardProps {
   beach: Beach;
@@ -8,6 +10,8 @@ interface BeachCardProps {
 
 const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
   const navigate = useNavigate();
+  const { user } = useAuth();
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   const handleCardClick = () => {
    navigate(`/beaches/${beach.id}`); 
@@ -37,6 +41,16 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
           alt={beach.name}
           className='w-full h-full object-cover rounded-t-2xl' 
         />
+        {user && (
+          <button
+            aria-label={isFavorite(beach.id) ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+            onClick={(e) => { e.stopPropagation(); toggleFavorite(beach.id); }}
+            className={`absolute top-2 right-2 p-2 rounded-full shadow-md transition cursor-pointer 
+            ${isFavorite(beach.id) ? 'bg-yellow-400 text-white' : 'bg-white text-yellow-500'}`}
+          >
+            {isFavorite(beach.id) ? '★' : '☆'}
+          </button>
+        )}
      </div>
        <div className="p-4 flex-1 flex flex-col justify-between "> 
          <h4 className="text-base font-semibold text-[var(--color-primary-800)] mb-2 capitalize transition-all duration-500 ">

@@ -1,10 +1,17 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 import Logo from '../../assets/logo2-sem-fundo.png'
 import backgroundImg from '../../assets/beache1.jpg'
 
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen md:h-screen bg-[var(--color-primary-100)] relative">
@@ -16,6 +23,19 @@ const SignIn = () => {
       </button>
       
       <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setError(null);
+          setSubmitting(true);
+          try {
+            await login({ email, password });
+            navigate("/");
+          } catch (err: any) {
+            setError(err?.message || "Falha ao entrar");
+          } finally {
+            setSubmitting(false);
+          }
+        }}
         className="min-h-screen md:h-screen flex flex-col items-center justify-center gap-8 md:gap-10 bg-cover bg-center bg-no-repeat px-4"
         style={{
           backgroundImage: `url(${backgroundImg})`,
@@ -41,7 +61,10 @@ const SignIn = () => {
                 id="email"
                 type="email"
                 placeholder="Digite seu email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="border-1 p-2 rounded w-full "
+                required
               />
             </label>
 
@@ -54,7 +77,10 @@ const SignIn = () => {
                 id="senha"
                 type="password"
                 placeholder="Digite sua senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="border-1 p-2 rounded w-full"
+                required
               />
             </label>
           </div>
@@ -63,9 +89,14 @@ const SignIn = () => {
             type="submit"
             className="bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-500)]
             text-white p-2 rounded w-full transition duration-150 cursor-pointer"
+            disabled={submitting}
           >
-            Entrar
+            {submitting ? "Entrando..." : "Entrar"}
           </button>
+
+          {error && (
+            <p className="text-sm text-[var(--color-error)] text-center">{error}</p>
+          )}
 
           <p className="text-sm">
             Não tem conta?

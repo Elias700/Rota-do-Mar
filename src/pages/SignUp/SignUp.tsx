@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 import ModalWelcome from "../../components/ModalWelcome/ModalWelcome";
-// Importa o conteúdo dos termos para uso
 import PrivacyTermsContent from "../../components/PrivacyTermsContent/PrivacyTermsContent"; 
 
 import Logo from '../../assets/logo2-sem-fundo.png'
@@ -11,6 +11,7 @@ type FieldName = "name" | "email" | "password" | "confirm";
 
 const SignUp: React.FC = () => {
   const navigate = useNavigate();
+  const { register } = useAuth();
 
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
@@ -20,6 +21,8 @@ const SignUp: React.FC = () => {
   const [confirm, setConfirm] = useState<string>("");
   const [terms, setTerms] = useState<boolean>(false);
   const [focusedField, setFocusedField] = useState<FieldName | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // ✅ validação por campo (com email aprimorado)
   const validateField = (field: FieldName, value: string): boolean => {
@@ -29,7 +32,6 @@ const SignUp: React.FC = () => {
 
         case "email": {
           const atIndex = value.indexOf("@");
-            // deve conter @ e haver caracteres depois dele
             return atIndex > 0 && atIndex < value.length - 1;
         }
 
@@ -60,11 +62,19 @@ const SignUp: React.FC = () => {
       validateField("confirm", confirm) &&
       terms;
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       if (!isFormValid) return;
-      alert("Conta criada com sucesso!");
-      navigate("/login");
+      setError(null);
+      setSubmitting(true);
+      try {
+        await register({ name, email, password });
+        navigate("/login");
+      } catch (err: any) {
+        setError(err?.message || "Falha ao cadastrar");
+      } finally {
+        setSubmitting(false);
+      }
     };
 
     return (
@@ -184,15 +194,19 @@ const SignUp: React.FC = () => {
                     <div className="flex flex-col items-center mt-8">
                         <button
                             type="submit"
-                            disabled={!isFormValid}
+                            disabled={!isFormValid || submitting}
                             className={`p-2 rounded w-full font-semibold transition duration-300 cursor-pointer ${
-                                isFormValid
+                                isFormValid && !submitting
                                     ? "bg-[var(--color-primary-600)] text-white hover:bg-[var(--color-primary-500)]"
                                     : "bg-[var(--color-desabled)] text-gray-200 cursor-not-allowed"
                             }`}
                         >
-                            Criar conta
+                            {submitting ? "Criando conta..." : "Criar conta"}
                         </button>
+
+                        {error && (
+                          <p className="text-sm text-[var(--color-error)] text-center">{error}</p>
+                        )}
 
                         <p className="p-3">
                             Já tem conta?

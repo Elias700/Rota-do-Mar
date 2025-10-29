@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'; 
 import { beaches } from '../../data/beachesData'; 
 import Header from '../../components/Header/Header';
@@ -12,6 +12,11 @@ const BeachesDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>(); 
     const beachId = parseInt(id || '0'); 
     const beach = beaches.find(b => b.id === beachId);
+
+    useEffect(() => {
+        // Ensure page starts at the top when navigating here
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    }, []);
 
     if (!beach) {
         return <div>Erro 404: Praia não encontrada ou ID inválido.</div>;

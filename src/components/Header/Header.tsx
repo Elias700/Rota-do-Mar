@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/logo.png"; 
+import { useAuth } from "../../contexts/AuthContext";
 
 const Header = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   return (
     <header className="fixed top-0 w-full z-50">
@@ -82,50 +84,86 @@ const Header = () => {
                 bg-[var(--color-primary-50)] group-hover:w-full"
               ></span>
             </li>
+
+            {user && (
+              <li className="text-[var(--color-primary-50)] text-2xl cursor-pointer relative group w-max">
+                <Link 
+                  to="/favoritos" 
+                  className="relative z-10"
+                >
+                  Favoritos
+                </Link>
+                <span
+                  className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5
+                  bg-[var(--color-primary-50)] group-hover:w-full"
+                ></span>
+              </li>
+            )}
           </ul>
         </nav>
 
         <div className="hidden md:flex gap-5">
-          <button
-            onClick={() => navigate("/login")}
-            className="cursor-pointer px-12 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
-            text-[var(--color-primary-50)] font-medium group shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
-          >
-            <div className="relative overflow-hidden">
-              <p
-                className="group-hover:-translate-y-7 duration-[1.125s] 
-                ease-[cubic-bezier(0.19,1,0.22,1)] text-[var(--color-primary-50)]"
+          {!user ? (
+            <>
+              <button
+                onClick={() => navigate("/login")}
+                className="cursor-pointer px-12 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
+                text-[var(--color-primary-50)] font-medium group shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
               >
-                Login
-              </p>
-              <p
-                className="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] 
-                ease-[cubic-bezier(0.19,1,0.22,1)] text-[var(--color-primary-50)]"
-              >
-                Login
-              </p>
-            </div>
-          </button>
+                <div className="relative overflow-hidden">
+                  <p
+                    className="group-hover:-translate-y-7 duration-[1.125s] 
+                    ease-[cubic-bezier(0.19,1,0.22,1)] text-[var(--color-primary-50)]"
+                  >
+                    Login
+                  </p>
+                  <p
+                    className="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] 
+                    ease-[cubic-bezier(0.19,1,0.22,1)] text-[var(--color-primary-50)]"
+                  >
+                    Login
+                  </p>
+                </div>
+              </button>
 
-          <button
-            onClick={() => navigate("/cadastro")}
-            className="cursor-pointer px-12 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
-            text-[var(--color-primary-50)] font-medium group shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
-          >
-            <div className="relative overflow-hidden">
-              <p
-                className="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+              <button
+                onClick={() => navigate("/cadastro")}
+                className="cursor-pointer px-12 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
+                text-[var(--color-primary-50)] font-medium group shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
               >
-                Cadastro
-              </p>
-              <p
-                className="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] 
-                ease-[cubic-bezier(0.19,1,0.22,1)] text-[var(--color-primary-50)]"
+                <div className="relative overflow-hidden">
+                  <p
+                    className="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
+                  >
+                    Cadastro
+                  </p>
+                  <p
+                    className="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] 
+                    ease-[cubic-bezier(0.19,1,0.22,1)] text-[var(--color-primary-50)]"
+                  >
+                    Cadastro
+                  </p>
+                </div>
+              </button>
+            </>
+          ) : (
+            <>
+              {/* <button
+                onClick={() => navigate("/favoritos")}
+                className="cursor-pointer px-8 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
+                text-[var(--color-primary-50)] font-medium shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
               >
-                Cadastro
-              </p>
-            </div>
-          </button>
+                Favoritos
+              </button> */}
+              <button
+                onClick={async () => { await logout(); navigate("/"); }}
+                className="cursor-pointer px-8 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
+                text-[var(--color-primary-50)] font-medium shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
+              >
+                Sair
+              </button>
+            </>
+          )}
         </div>
 
         <button
@@ -208,23 +246,54 @@ const Header = () => {
                       Contato
                   </Link>
                 </li>
+                {user && (
+                  <li className="text-[var(--color-primary-50)] text-xl">
+                    <Link 
+                      to="/favoritos" 
+                      onClick={() => setOpen(false)}
+                    >
+                      Favoritos
+                    </Link>
+                  </li>
+                )}
               </ul>
 
               <div className="mt-4 flex flex-col gap-3">
-                <button
-                  onClick={() => { setOpen(false); navigate("/login"); }}
-                  className="px-4 py-3 rounded-xl border border-[var(--color-primary-50)] text-[var(--color-primary-50)]
-                  font-medium shadow-md hover:bg-[var(--color-primary-600)]"
-                >
-                  Login
-                </button>
-                <button
-                  onClick={() => { setOpen(false); navigate("/cadastro"); }}
-                  className="px-4 py-3 rounded-xl border border-[var(--color-primary-50)] text-[var(--color-primary-50)] 
-                  font-medium shadow-md hover:bg-[var(--color-primary-600)]"
-                >
-                  Cadastro
-                </button>
+                {!user ? (
+                  <>
+                    <button
+                      onClick={() => { setOpen(false); navigate("/login"); }}
+                      className="px-4 py-3 rounded-xl border border-[var(--color-primary-50)] text-[var(--color-primary-50)]
+                      font-medium shadow-md hover:bg-[var(--color-primary-600)]"
+                    >
+                      Login
+                    </button>
+                    <button
+                      onClick={() => { setOpen(false); navigate("/cadastro"); }}
+                      className="px-4 py-3 rounded-xl border border-[var(--color-primary-50)] text-[var(--color-primary-50)] 
+                      font-medium shadow-md hover:bg-[var(--color-primary-600)]"
+                    >
+                      Cadastro
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => { setOpen(false); navigate("/favoritos"); }}
+                      className="px-4 py-3 rounded-xl border border-[var(--color-primary-50)] text-[var(--color-primary-50)] 
+                      font-medium shadow-md hover:bg-[var(--color-primary-600)]"
+                    >
+                      Favoritos
+                    </button>
+                    <button
+                      onClick={async () => { setOpen(false); await logout(); navigate("/"); }}
+                      className="px-4 py-3 rounded-xl border border-[var(--color-primary-50)] text-[var(--color-primary-50)] 
+                      font-medium shadow-md hover:bg-[var(--color-primary-600)]"
+                    >
+                      Sair
+                    </button>
+                  </>
+                )}
               </div>
             </nav>
           </div>

@@ -7,10 +7,11 @@ import App from './App';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import BeachesDetail from './pages/BeachesDetail/BeachesDetail';
+import { AuthProvider } from './contexts/AuthContext';
+import Favorites from './pages/Favorites/Favorites';
+import { FavoritesProvider } from './contexts/FavoritesContext';
 
 import './index.css';
-
-// Estas são as importações corretas para o CSS do carrossel:
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -31,10 +32,18 @@ const router = createBrowserRouter([
      path: "/beaches/:id", 
      element: <BeachesDetail />,
    },
+   {
+     path: "/favoritos",
+     element: <Favorites />,
+   },
 ]);
 
 createRoot(document.getElementById('root')!).render(
-   <StrictMode>
-     <RouterProvider router={router} />
-   </StrictMode>
+  <StrictMode>
+    <AuthProvider>
+      <FavoritesProvider>
+        <RouterProvider router={router} />
+      </FavoritesProvider>
+    </AuthProvider>
+  </StrictMode>
 );
