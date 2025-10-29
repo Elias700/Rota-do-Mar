@@ -112,6 +112,23 @@ const BeachesDetail: React.FC = () => {
                             </p>
                         </div>
                     </div>
+
+                    {/* MAPA */}
+                    <div className='max-w-5xl mx-auto p-6'>
+                        <h2 className="text-2xl font-semibold text-[var(--color-primary-700)] mb-4">📍 Localização no mapa</h2>
+                        <div className="w-full h-[420px] rounded-xl overflow-hidden shadow">
+                            <iframe
+                                title={`Mapa de ${beach.name}`}
+                                src={`https://www.google.com/maps?q=${encodeURIComponent(beach.name)}&output=embed`}
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+                        </div>
+                    </div>
               </div>
             <Footer />
         </div>

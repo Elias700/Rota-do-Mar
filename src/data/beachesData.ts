@@ -50,10 +50,10 @@ export const beaches: Beach[] = [
         description: 'A Praia de Itapuã é eternizada pelos versos de Vinicius de Moraes e Dorival Caymmi, sendo um dos bairros mais poéticos e tradicionais de Salvador, com forte conexão com a cultura local de pescadores. Localizada na orla atlântica, é marcada por um belo calçadão repleto de coqueiros, onde se encontra a famosa estátua da Sereia de Itapuã, um ponto de referência cultural e turístico. As águas são predominantemente mornas e apresentam variações, com trechos mais agitados e outros que formam áreas tranquilas e piscinas naturais na maré baixa, devido à presença de arrecifes, permitindo um banho de mar agradável. A praia mantém forte o clima de vila de pescadores, com a colônia de pesca ativa e a possibilidade de saborear o autêntico acarajé da Cira, um ícone da gastronomia baiana. Seu farol, mais um cartão-postal, e a presença constante de música e cultura fazem de Itapuã um local vibrante, autêntico e cheio de história.',
         descriptionCard: 'Imortalizada em poemas, esta praia com coqueiros e areia clara é um cenário clássico, perfeito para relaxar e apreciar a vista.', 
         imageUrl: [
+            'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQZFbdOG5FZQn-eQvWNFVMXlo9DZT2VBhkad4meKhOLn1YRwsoSbtQ1tYSgyQ4_BWAW_Db44H7uZ3vQE8hCrOvvrIAb1dbZfaaDzEOj9vGos9tUWQE',
             'https://turismo.itapoa.sc.gov.br/uploads/sites/108/2022/10/2442827-scaled.jpg',
-            'https://www.temporadalivre.com/uploads/editor/pictures/0ca253789a5f/content_content_itapoa.jpg',
-            'https://www.temporadalivre.com/uploads/editor/pictures/fc489dba3d72/content_itapoa-01.jpg',
-            'https://www.viajecomigo.com/wp-content/uploads/2022/03/praia-do-Farol-de-Itapua-Salvador-Brasil-%C2%A9-Viaje-Comigo.jpg'
+            'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQWsY_uIyAICErhJgAcirb2O6fI7afW7W5iYXVaj_XfPs7P7YzCXDgwjI0L8f7_pftOGPbVVCxYVVLHCl35VVe1bj_aBr6RDHFnYQdxqFqbpYxsgg4',
+            'https://www.temporadalivre.com/uploads/editor/pictures/0ca253789a5f/content_content_itapoa.jpg'
         ]
     },
     {
@@ -63,7 +63,8 @@ export const beaches: Beach[] = [
         descriptionCard: 'Localizada no bairro boêmio, é mais conhecida por sua intensa vida noturna, culinária local e tradições religiosas.', 
         imageUrl: [
             'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a8/0c/53/caption.jpg?w=1200&h=-1&s=1',
-            'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a8/0c/53/caption.jpg?w=1200&h=-1&s=1', 
+            'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTbFzjq4BuwdFyVr_GmmVAHKbEJKr0L-_QSuS4eKbxDnGxzNzbz195mADFXB7v94XAzEgeNMdHyehF1H4zFjjdvtfV4UOL4-3zkhhfYx_nTEub3z_g', 
+            'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRWXBDBYPvF-ngBT9rM082MsWkrXlADL9wI11GsOdc60ui323i3bMYL0AR5D59u8yCumACwtG8mYg39KEn7t3853fWihCAei0jD1af0M268KIsUUI0'
         ]
     },
     {
@@ -73,7 +74,9 @@ export const beaches: Beach[] = [
         descriptionCard: 'Uma pequena enseada charmosa e reservada, que oferece ondas fortes e um clima mais exclusivo e intimista.', 
         imageUrl: [
             'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a8/0c/53/caption.jpg?w=1200&h=-1&s=1',
-            'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a8/0c/53/caption.jpg?w=1200&h=-1&s=1', 
+            'https://averdade.org.br/wp-content/uploads/2024/04/PRAIA-BURACAO.jpeg', 
+            'https://365salvador.wordpress.com/wp-content/uploads/2013/02/praia-do-buracao-carol.jpg',
+            'https://a0.muscache.com/im/pictures/9d069cd7-5827-4806-82fd-9f6df1ee212c.jpg'
         ]
     },
     {
@@ -82,8 +85,9 @@ export const beaches: Beach[] = [
         description: 'A Praia de Amaralina é um trecho da orla de Salvador marcado pela presença constante de ondas fortes e uma vasta formação de arrecifes e pedras, o que a torna um local mais desafiador para banhistas, mas muito popular entre surfistas e pescadores locais. A área é conhecida por sua culinária de rua, especialmente o tabuleiro das famosas Baianas de Acarajé, que se concentram no Largo de Amaralina. A praia oferece uma boa infraestrutura urbana com calçadão e ciclovia, sendo ideal para atividades físicas ao ar livre. As fortes correntes e o mar aberto exigem cautela dos banhistas, que geralmente preferem as áreas de piscina formadas pelas pedras na maré baixa. É um ponto que mistura o vigor do mar atlântico com a autenticidade cultural e gastronômica de um bairro tradicional de Salvador.',
         descriptionCard: 'Com ondas agitadas e a presença de recifes, é um ponto popular para surfistas e pescadores.', 
         imageUrl: [
-            'https://www.guiaviagensbrasil.com/imageUrlns/foto-praia-da-amaralina-salvador-bahia-brasil-2212.jpg',
-            'https://www.guiaviagensbrasil.com/imageUrlns/foto-praia-da-amaralina-salvador-bahia-brasil-2212.jpg', 
+            'https://www.guiaviagensbrasil.com/imagens/praia-amaralina-salvador-ba-9331.jpg',
+            'https://www.oquefazerna.com.br/wp-content/uploads/2023/11/WP_20161011_14_30_52_Pro_LI-1024x576.jpg', 
+            'https://www.praias-360.com.br/img-600/ba/salvador/ba-salvador-praia-de-amaralina-060.jpg'
         ]
     },
     {
@@ -92,8 +96,8 @@ export const beaches: Beach[] = [
         description: 'A Praia de Ondina está localizada em um dos bairros mais sofisticados de Salvador, sendo um ponto estratégico por sediar grandes hotéis, resorts e o Palácio de Ondina, residência oficial do Governador. A praia é famosa por ser o ponto inicial de um dos circuitos oficiais do Carnaval de Salvador (circuito Barra-Ondina). Suas águas são predominantemente calmas, com trechos protegidos por arrecifes que formam piscinas naturais, ideais para o banho de crianças e famílias. A orla é bem cuidada, com estruturas de lazer e o movimento constante de turistas hospedados nos resorts vizinhos. Embora a faixa de areia possa ser estreita em alguns pontos, especialmente na maré alta, o local oferece belas vistas e um ambiente mais tranquilo em comparação às praias centrais, sendo um cartão-postal com um toque de elegância urbana.',
         descriptionCard: 'Ponto de partida do circuito de Carnaval, caracteriza-se por águas mais calmas e por ser cercada por grandes hotéis e resorts.', 
         imageUrl: [
-            'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/60/93/4f/poucos-conhecem-mas-esta.jpg?w=700&h=400&s=1',
-            'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/60/93/4f/poucos-conhecem-mas-esta.jpg?w=700&h=400&s=1', 
+            'https://institucional.seazone.com.br/wp-content/uploads/2025/01/praia-da-ondina-tourb.jpg',
+            '', 
         ]
     },
     {
@@ -172,8 +176,8 @@ export const beaches: Beach[] = [
         description: 'A Praia de Tubarão é um refúgio de águas calmas e tranquilas, localizada na Enseada do Cabrito, na Baía de Todos-os-Santos, sendo um local mais reservado e ideal para quem busca fugir da agitação das praias urbanas. Suas águas, quase sem ondas, são cristalinas e mornas, perfeitas para banhistas que procuram segurança e relaxamento, especialmente famílias e idosos. A praia mantém um ambiente simples e autêntico, com foco na pesca artesanal e na culinária local, onde é possível encontrar frutos do mar frescos. Por ser menos frequentada por turistas, Tubarão oferece uma experiência mais genuína e pacífica de Salvador, sendo um convite à contemplação e ao descanso. É um dos segredos da Baía que proporciona um contato direto com a cultura e a beleza natural local.',
         descriptionCard: 'Uma das praias mais tranquilas e reservadas, conhecida por suas águas calmas, ideal para um refúgio da cidade.', 
         imageUrl: [
-            'https://lh5.googleusercontent.com/p/AF1QipMgxoDlLbFNP6DcNBoJ0WQp6USheSXt1s2q9RlI=s1600', 
-            'https://lh5.googleusercontent.com/p/AF1QipMgxoDlLbFNP6DcNBoJ0WQp6USheSXt1s2q9RlI=s1600', 
+            'https://lh5.googleusercontent.com/p/AF1QipMgxoDlLbFNP6DcNBoJ0WQp6USheSXt1s2q9RlI=s1600',
+            'https://s2-g1.glbimg.com/ciezn2_RS4XMqH6qAoBhfyvmlEc=/0x0:1700x1065/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/L/0/EtDyqaTXyIRnxxBzFbbw/img-6130.jpg'
         ]
     },
     {
@@ -182,8 +186,7 @@ export const beaches: Beach[] = [
         description: 'A Praia de Pituaçu é um trecho da orla de Salvador que fica próxima ao famoso Parque de Pituaçu, um grande complexo de lazer e preservação ambiental. Embora a praia em si não seja o principal foco dos banhistas devido à sua proximidade com a foz de um rio e às condições do mar, a região é amplamente visitada pela sua excelente infraestrutura urbana e pelas opções de lazer que a cercam. A praia é marcada por uma vasta área de areia e coqueiros, e é muito utilizada para a prática de esportes ao ar livre, caminhadas e ciclismo. O local reflete a expansão e o desenvolvimento urbano da cidade, oferecendo um espaço de convivência e lazer para os moradores e turistas que buscam atividades físicas e um contato visual agradável com o mar atlântico.',
         descriptionCard: 'Localizada próxima ao Parque de Pituaçu, é uma praia urbanizada e popular, oferecendo uma boa estrutura para os visitantes.', 
         imageUrl: [
-            'https://static.wixstatic.com/media/954288_c0ea959ada884f9aaedc9b548d956d86~mv2.jpg/v1/fill/w_699,h_393,al_c,lg_1,q_80,enc_auto/954288_c0ea959ada884f9aaedc9b548d956d86~mv2.jpg',
-            'https://static.wixstatic.com/media/954288_c0ea959ada884f9aaedc9b548d956d86~mv2.jpg/v1/fill/w_699,h_393,al_c,lg_1,q_80,enc_auto/954288_c0ea959ada884f9aaedc9b548d956d86~mv2.jpg', 
+            'https://static.wixstatic.com/media/954288_c0ea959ada884f9aaedc9b548d956d86~mv2.jpg/v1/fill/w_699,h_393,al_c,lg_1,q_80,enc_auto/954288_c0ea959ada884f9aaedc9b548d956d86~mv2.jpg'
         ]
     },
     {
@@ -192,7 +195,6 @@ export const beaches: Beach[] = [
         description: 'A Praia da Boca do Rio é uma área da orla de Salvador onde o Rio Camarajipe encontra o mar, criando um cenário peculiar e tranquilo que agrada a quem busca a paz e o sossego. Suas águas são predominantemente calmas e mais reservadas, sendo um bom local para banho, especialmente para crianças. A praia possui uma faixa de areia extensa, ideal para atividades como caminhadas e a prática de esportes na areia. A vista, que combina o azul do mar com a vegetação da área de foz do rio, oferece uma paisagem diferente das praias de mar aberto. É um ponto de encontro familiar, com infraestrutura de quiosques simples, e representa um dos poucos locais da cidade que ainda preserva uma atmosfera de maior tranquilidade, sendo um convite ao relaxamento e à contemplação da natureza.',
         descriptionCard: 'Praia tranquila, que oferece águas calmas e uma vista que combina o encontro do rio e do mar, ideal para relaxamento.', 
         imageUrl: [
-            'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/35/22/bb/caption.jpg?w=800&h=400&s=1',
             'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/35/22/bb/caption.jpg?w=800&h=400&s=1', 
         ]
     },
@@ -203,7 +205,8 @@ export const beaches: Beach[] = [
         descriptionCard: 'Pequena e charmosa, esta praia é um local de refúgio e calmaria no bairro Rio Vermelho, ideal para quem busca tranquilidade.', 
         imageUrl: [
             'https://www.salvadordabahia.com/wp-content/uploads/2017/12/cultural-rio-vermelho-07-12-20.jpg',
-            'https://www.salvadordabahia.com/wp-content/uploads/2017/12/cultural-rio-vermelho-07-12-20.jpg', 
+            'https://static.wixstatic.com/media/954288_1e57ba437ca0438ab75ef1e92d0d5197~mv2.jpg/v1/fill/w_500,h_281,al_c,q_80,enc_auto/954288_1e57ba437ca0438ab75ef1e92d0d5197~mv2.jpg',
+            'https://lh5.googleusercontent.com/p/AF1QipNg6Uysfvol-kjd_srgJ_PqFqiaDW1C8XdIts0N=s1600' 
         ]
     },
     {
@@ -213,7 +216,9 @@ export const beaches: Beach[] = [
         descriptionCard: 'Um verdadeiro paraíso com águas cristalinas e tranquilas na Baía de Todos-os-Santos, perfeita para mergulho e contato com a natureza.', 
         imageUrl: [
             'https://s2.glbimg.com/wTvHVw5KP_o0tlZK2Zk6tyRParc=/smart/e.glbimg.com/og/ed/f/original/2022/01/14/ilha-dos-frades-2.jpg',
-            'https://s2.glbimg.com/wTvHVw5KP_o0tlZK2Zk6tyRParc=/smart/e.glbimg.com/og/ed/f/original/2022/01/14/ilha-dos-frades-2.jpg', 
+            'https://turismo.b-cdn.net/wp-content/uploads/2012/11/Praia-de-Paramana-na-Ilha-dos-Frades.jpg', 
+            'https://imgmd.net/images/v1/guia/2475916/ilha-dos-frades.jpg',
+            'https://static.wixstatic.com/media/4235e8_56c0fff1f87b49588042e509260ff15f~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_85,usm_0.66_1.00_0.01/4235e8_56c0fff1f87b49588042e509260ff15f~mv2.jpg'
         ]
     }
 ];

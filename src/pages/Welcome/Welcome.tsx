@@ -16,7 +16,7 @@ const Welcome = () => {
                     
                     <p 
                         className='m-10 text-[1.2rem]'
-                        >
+                    >
                             Neste site, você vai embarcar em uma jornada pelas mais deslumbrantes praias de Salvador, 
                             descobrindo o que cada uma tem de especial. Nossa missão é oferecer todas as informações 
                             que você precisa para planejar seu dia perfeito, seja para relaxar, se aventurar ou simplesmente

@@ -4,6 +4,9 @@ import ModalWelcome from "../../components/ModalWelcome/ModalWelcome";
 // Importa o conteúdo dos termos para uso
 import PrivacyTermsContent from "../../components/PrivacyTermsContent/PrivacyTermsContent"; 
 
+import Logo from '../../assets/logo2-sem-fundo.png'
+import backgroundImg from '../../assets/pexels-pixabay-269583.jpg'
+
 type FieldName = "name" | "email" | "password" | "confirm";
 
 const SignUp: React.FC = () => {
@@ -65,19 +68,28 @@ const SignUp: React.FC = () => {
     };
 
     return (
-        <div className="h-screen bg-[var(--color-primary-100)] relative">
+        <div>
             <button
                 onClick={() => navigate("/")}
-                className="absolute top-5 left-5 text-[var(--color-primary-600)] hover:underline font-medium cursor-pointer"
+                className="absolute top-5 left-5 text-[var(--color-primary-50)] hover:underline font-medium cursor-pointer"
             >
                 Voltar para Página principal
             </button>
 
             <form
                 onSubmit={handleSubmit}
-                className="h-[100vh] flex flex-col items-center justify-center bg-[var(--color-primary-100)]"
+                className="h-screen flex flex-col items-center justify-center gap-10 bg-cover bg-center bg-no-repeat"
+                style={{
+                    backgroundImage: `url(${backgroundImg})`,
+                }}
             >
-                <h1 className="text-center text-4xl p-10">Cadastro</h1>
+
+                {/* <h1 className="text-center text-4xl p-10">Cadastro</h1> */}
+                <img 
+                    src={Logo} 
+                    alt="logo" 
+                    className="h-40"    
+                />
                 <div className="flex flex-col w-full max-w-xs sm:max-w-md p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
                     <div className="flex flex-col gap-4">
                         <label>
