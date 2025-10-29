@@ -1,4 +1,3 @@
-// src/hooks/useWeather.ts (Mantenha esta versão atualizada)
 import { useState, useEffect, useCallback } from "react";
 
 interface WeatherData {
@@ -35,7 +34,7 @@ const useWeather = (city: string, apiKey: string): WeatherHookResult => {
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = useCallback(async () => {
-    // ⭐️ SEMPRE COMEÇA RESETANDO ESTADOS 
+    // SEMPRE COMEÇA RESETANDO ESTADOS 
     setLoading(true); 
     setError(null);
 
@@ -74,7 +73,7 @@ const useWeather = (city: string, apiKey: string): WeatherHookResult => {
       console.error("Erro na busca do clima:", err.message);
       setError(err.message || "Não foi possível carregar o clima.");
     } finally {
-      // ⭐️ GARANTE QUE O LOADING SEJA FALSE, independente de sucesso ou falha
+      // GARANTE QUE O LOADING SEJA FALSE, independente de sucesso ou falha
       setLoading(false);
     }
   }, [city, apiKey]);

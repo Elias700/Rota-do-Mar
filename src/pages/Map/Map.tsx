@@ -2,20 +2,22 @@ import imgMapa from '../../assets/icone-praia.png';
 
 const Map: React.FC = () => { 
   return (
-    <div className='bg-[var(--color-primary-50)]'> 
+    <div className='bg-[var(--color-primary-10)]'> 
           
       <main id='mapa' className='pt-20 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>     
-        <h1 className='text-5xl text-center text-[var(--color-primary-700)] font-extrabold pt-10 pb-4'>
-            Mapa Interativo
+        <h1 className='text-5xl text-center text-[var(--color-primary-700)] pt-10 pb-4'>
+            Mapa 
         </h1>
 
-        <p className='text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto flex items-center justify-center'>
+        <p 
+          className='text-lg text-center text-[var(--color-primary-600)] mb-10 max-w-3xl mx-auto flex items-center justify-center'
+        >
+          Localize as praias através desse icone. 
           <img 
             src={imgMapa} 
             alt="Icone de praia" 
             className='h-8 w-8 mr-2 inline-block' 
-          />
-            
+          />  
         </p>
 
         <div className='relative w-full overflow-hidden rounded-xl shadow-2xl mx-auto pb-[75%]'>

@@ -31,15 +31,21 @@
 
   --color-background-card-blue: #BFDBFE;
   --color-background-card-green: #BBF7D0;
-  
 
-  --font-title: 'sans': ['Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif'];
-  --font-destaque: ['Oswald', 'sans-serif'];
-  --font-chamativa: ['Protest Revolution', 'sans-serif'];
+  --font-title: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-destaque: 'Oswald', sans-serif;
+  --font-chamativa: 'Protest Revolution', sans-serif;
+  --font-cursive: 'Dancing Script', cursive;
 }
 
-
-        
-        
-        
-        
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-destaque);
+  }
+  p {
+    font-family: var(--font-title);
+  }
+  li, button, strong, a {
+    font-family: var(--font-title);
+  }
+}

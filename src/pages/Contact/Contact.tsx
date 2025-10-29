@@ -1,8 +1,11 @@
 const Contact = () => {
 
     return (
-        <form id="contato" className="h-[100vh] flex flex-col items-center justify-center bg-[var(--color-light)]">
-                <h1 className="text-center text-4xl text-[var(--color-primary-700)] font-bold p-10">Contato</h1>
+        <form 
+            id="contato" 
+            className="h-[100vh] flex flex-col items-center justify-center bg-[var(--color-light)]"
+        >
+                <h1 className="text-center text-5xl text-[var(--color-primary-700)]  p-10">Contato</h1>
                 <div className="flex flex-col w-full max-w-xs sm:max-w-md p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
                     <div className="flex flex-col gap-4">
                         <label>

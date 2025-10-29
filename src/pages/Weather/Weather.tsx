@@ -62,27 +62,28 @@ if (loading) {
 if (error) {
   return (
    <div className="text-center p-5 text-[var(--color-error)]">
-    <p>⚠️ {error}</p>
+    <p>⚠️{error}</p>
    </div>
   );
 }
 
 return (
-    <div id="tempo" className="w-full p-20 flex justify-center">
-        <div className="bg-white rounded-2xl max-w-lg w-full shadow-xl overflow-hidden font-sans">
-            <h1 className="text-3xl font-destaque font-bold text-center text-[var(--color-primary-700)] mb-4" >
+    <div id="tempo" className="w-full px-4 py-10 md:py-16 flex justify-center">
+        <div className="rounded-2xl max-w-md sm:max-w-lg w-full shadow-xl overflow-hidden font-sans">
+            <h1 className="text-3xl md:text-5xl text-center text-[var(--color-primary-700)] mb-6 md:mb-10" >
                 Previsão do Tempo
             </h1>
             {weather && (
-            
             <>
-                    {/* 1. SEÇÃO PRINCIPAL (Temperatura e Descrição) */}
                 <div
-                    // ⭐️ USANDO SUAS CORES NO GRADIENTE
-                    className="text-white p-4 text-center rounded-t-2xl"
-                    style={{ backgroundImage: "linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%)" }} 
+                    className="text-white p-4 md:p-6 text-center rounded-t-2xl"
+                    style={
+                        { 
+                            backgroundImage: "linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%)" 
+                        }
+                    } 
                 >
-                        <h2 className="text-xl font-normal mb-0.5">
+                        <h2 className="text-lg text-[var(--color-primary-50)] md:text-xl font-normal mb-0.5">
                             {weather.name}, BA
                         </h2>
                         <img
@@ -90,43 +91,46 @@ return (
                             alt={weather.weather[0].description}
                             className="w-12 h-12 mx-auto filter drop-shadow-md" 
                         />
-                        <p className="text-5xl font-bold m-0">
+                        <p className="text-4xl md:text-5xl text-[var(--color-primary-50)] m-0">
                             {weather.main.temp.toFixed(0)}°C
                         </p>
-                        <p className="capitalize text-lg m-0">
+                        <p className="capitalize text-base text-[var(--color-primary-50)] md:text-lg m-0">
                             {weather.weather[0].description}
                         </p>
                 </div>
-
-                    {/* 2. SEÇÃO DE DETALHES */}
-                    <div className="p-4">
-                        <h3 className="text-sm text-gray-600 mb-2 border-b pb-1 border-gray-200">
+                    <div className="p-4 md:p-6">
+                        <h3 className="text-xs md:text-sm text-[var(--color-primary-900)] mb-2 border-b pb-1 border-[var(--color-primary-600)]">
                             Detalhes do Clima
                         </h3>
-                            <div className="grid grid-cols-2 gap-2">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 {detailItems(weather).map(item => (
-                                    // ⭐️ USANDO COR PRIMÁRIA CLARA NO BACKGROUND E TEXTO
                                     <div key={item.label} className="text-left p-2 bg-primary-50 rounded-lg">
-                                        <p className="m-0 text-xl">{item.icon}</p>
-                                        <p className="m-0 text-xs text-gray-500">{item.label}</p>
-                                        <p className="m-0 text-sm font-bold text-primary-700">{item.value}</p>
+                                        <p className="m-0 text-lg md:text-xl">{item.icon}</p>
+                                        <p className="m-0 text-[10px] md:text-xs text-[var(--color-primary-600)]">{item.label}</p>
+                                        <p className="m-0 text-sm md:text-base font-bold text-[var(--color-primary-900)]">{item.value}</p>
                                     </div>
                                     ))}
                             </div>
 
-                            <div className="my-3 border-b border-gray-200"></div> {/* Separador */}
+                            <div className="my-3 border-b border-[var(--color-primary-800)]"></div> 
 
-                            {/* 3. SEÇÃO NASCER/PÔR DO SOL */}
-                            <h3 className="text-sm text-gray-600 mb-2">Ciclo Solar</h3>
+                            <h3 className="text-xs md:text-sm text-[var(--color-primary-900)] mb-2">Ciclo Solar</h3>
 
                             {sunItems(weather).map(item => (
-                                <p key={item.label} className="flex justify-between text-sm mx-2 my-1">
-                                    <span className="text-gray-600">{item.icon} {item.label}:</span> 
-                                    {/* ⭐️ USANDO COR PRIMÁRIA NO VALOR */}
-                                    <span className="font-bold text-primary-700">{item.value}</span>
+                                <p 
+                                    key={item.label} 
+                                    className="flex justify-between text-sm md:text-base mx-2 my-1"
+                                >
+                                    <span className="text-[var(--color-primary-800)]">
+                                        {item.icon} 
+                                        {item.label}:
+                                    </span> 
+                                    <span className="font-bold text-[var(--color-primary-800)]">
+                                        {item.value}
+                                    </span>
                                 </p>
                             ))}
-                    </div>
+                </div>
             </>
             )}
         </div>

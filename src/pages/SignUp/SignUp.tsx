@@ -78,19 +78,18 @@ const SignUp: React.FC = () => {
 
             <form
                 onSubmit={handleSubmit}
-                className="h-screen flex flex-col items-center justify-center gap-10 bg-cover bg-center bg-no-repeat"
+                className="min-h-screen md:h-screen flex flex-col items-center justify-center gap-8 md:gap-10 bg-cover bg-center bg-no-repeat px-4"
                 style={{
                     backgroundImage: `url(${backgroundImg})`,
                 }}
             >
 
-                {/* <h1 className="text-center text-4xl p-10">Cadastro</h1> */}
                 <img 
                     src={Logo} 
                     alt="logo" 
-                    className="h-40"    
+                    className="h-28 md:h-40"    
                 />
-                <div className="flex flex-col w-full max-w-xs sm:max-w-md p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
+                <div className="flex flex-col w-full max-w-xs sm:max-w-md md:max-w-lg p-6 md:p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
                     <div className="flex flex-col gap-4">
                         <label>
                             <span className="font-medium">Nome</span>
@@ -210,10 +209,10 @@ const SignUp: React.FC = () => {
             </form>
 
             <ModalWelcome 
-                isOpen={isTermsModalOpen} // Controlado pelo estado
-                onClose={() => setIsTermsModalOpen(false)} // Fecha o modal
+                isOpen={isTermsModalOpen} 
+                onClose={() => setIsTermsModalOpen(false)} 
             >
-                <PrivacyTermsContent /> {/* Conteúdo injetado */}
+                <PrivacyTermsContent /> 
             </ModalWelcome>
         </div>
     );

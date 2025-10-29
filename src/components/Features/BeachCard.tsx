@@ -32,11 +32,11 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
     >
      <div className="block overflow-hidden h-2/5 rounded-t-2xl "> 
         <img 
-         // 🌟 MUDANÇA AQUI: Acessamos o índice [0] do array de imagens
-         src={beach.imageUrl[0]} 
-         alt={beach.name}
-         className='w-full h-full object-cover rounded-t-2xl' 
-         />
+          // MUDANÇA AQUI: Acessamos o índice [0] do array de imagens
+          src={beach.imageUrl[0]} 
+          alt={beach.name}
+          className='w-full h-full object-cover rounded-t-2xl' 
+        />
      </div>
        <div className="p-4 flex-1 flex flex-col justify-between "> 
          <h4 className="text-base font-semibold text-[var(--color-primary-800)] mb-2 capitalize transition-all duration-500 ">
@@ -46,9 +46,10 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
           {beach.descriptionCard} 
          </p>
          <button 
-          onClick={handleCardClick} 
-          className="mt-auto bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-800)] 
-          shadow-sm rounded-full py-2 px-5 text-[1rem] text-[var(--color-primary-50)] font-bold cursor-pointer">
+            onClick={handleCardClick} 
+            className="mt-auto bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-800)] 
+            shadow-sm rounded-full py-2 px-5 text-[1rem] text-[var(--color-primary-50)] font-bold cursor-pointer"
+          >
             Confira
          </button>
        </div>
