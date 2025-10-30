@@ -4,9 +4,7 @@ import { beaches } from '../../data/beachesData';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
-// 1. Importa os componentes do react-slick
 import Slider from "react-slick"; 
-// É essencial que você tenha importado os estilos globais em outro lugar
 
 const BeachesDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>(); 
@@ -14,22 +12,26 @@ const BeachesDetail: React.FC = () => {
     const beach = beaches.find(b => b.id === beachId);
 
     useEffect(() => {
-        // Ensure page starts at the top when navigating here
         window.scrollTo({ top: 0, behavior: 'auto' });
     }, []);
 
     if (!beach) {
-        return <div>Erro 404: Praia não encontrada ou ID inválido.</div>;
+        return <p className='text-[var(--color-primary-600)]'>
+                    <strong className='text-[var(--color-error)]'>
+                        Erro 404:
+                    </strong> 
+                        Praia não encontrada ou ID inválido.
+                </p>;
     }
 
-    // 2. Configurações do Carrossel (você pode customizar isso!)
+    // Configurações do Carrossel 
     const settings = {
-        dots: true, // Adiciona pontinhos de navegação
+        dots: true, // Adiciona pontos de navegação
         infinite: true, // Loop infinito
         speed: 500,
         slidesToShow: 1, // Mostra 1 slide por vez
         slidesToScroll: 1,
-        autoplay: true, // Opcional: passa as fotos automaticamente
+        autoplay: true, // Passa as fotos automaticamente
         autoplaySpeed: 3000,
     };
 
@@ -38,7 +40,11 @@ const BeachesDetail: React.FC = () => {
             <Header />
             
               <div className='mt-40'>
-                  <Link to="/" className='text-[var(--color-primary-600)] hover:underline p-10 font-medium cursor-pointer'>
+                  <Link 
+                    to="/" 
+                    className='text-[var(--color-primary-600)] hover:underline 
+                    p-10 font-medium cursor-pointer'
+                    >
                       Voltar para Página principal
                   </Link>
                   <h1 className='text-[var(--color-primary-700)] text-4xl text-center font-bold p-10'>
@@ -67,8 +73,7 @@ const BeachesDetail: React.FC = () => {
                         </p>
                         <div 
                             className="mb-8 bg-[var(--color-background-card-blue)] 
-                            rounded-xl p-4 shadow cursor-pointer 
-                            hover:bg-blue-100 hover:border-blue-300 hover:shadow-lg 
+                            rounded-xl p-4 shadow cursor-pointer hover:shadow-lg 
                             hover:scale-[1.01] transition-all duration-300"
                         >
                             <h2 
@@ -92,8 +97,7 @@ const BeachesDetail: React.FC = () => {
                         </div>
                         <div 
                             className="mb-8 bg-[var(--color-background-card-green)]
-                            rounded-xl p-4 shadow cursor-pointer 
-                            hover:bg-green-100 hover:border-green-300 hover:shadow-lg 
+                            rounded-xl p-4 shadow cursor-pointer hover:shadow-lg 
                             hover:scale-[1.01] transition-all duration-300"
                         >
                             <h2 className="text-xl font-semibold text-[var(--color-primary-700)] mb-2">🌊 Maré</h2>
@@ -118,7 +122,6 @@ const BeachesDetail: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* MAPA */}
                     <div className='max-w-5xl mx-auto p-6'>
                         <h2 className="text-2xl font-semibold text-[var(--color-primary-700)] mb-4">Localização no mapa</h2>
                         <div className="w-full h-[420px] rounded-xl overflow-hidden shadow">

@@ -17,7 +17,8 @@ const SignIn = () => {
     <div className="min-h-screen md:h-screen bg-[var(--color-primary-100)] relative">
       <button
         onClick={() => navigate("/")}
-        className="absolute top-5 left-5 text-[var(--color-primary-50)] hover:underline font-medium cursor-pointer"
+        className="absolute top-5 left-5 text-[var(--color-primary-50)] 
+        hover:underline font-medium cursor-pointer"
       >
         Voltar para Página principal
       </button>
@@ -36,7 +37,8 @@ const SignIn = () => {
             setSubmitting(false);
           }
         }}
-        className="min-h-screen md:h-screen flex flex-col items-center justify-center gap-8 md:gap-10 bg-cover bg-center bg-no-repeat px-4"
+        className="min-h-screen md:h-screen flex flex-col items-center 
+        justify-center gap-8 md:gap-10 bg-cover bg-center bg-no-repeat px-4"
         style={{
           backgroundImage: `url(${backgroundImg})`,
         }}
@@ -56,14 +58,15 @@ const SignIn = () => {
               htmlFor="email" 
               className="flex flex-col gap-1"
             >
-              <span className="font-medium">Email</span>
+              <span className="font-medium text-[var(--color-primary-900)]">Email</span>
               <input
                 id="email"
                 type="email"
                 placeholder="Digite seu email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border-1 p-2 rounded w-full "
+                className="border-2 border-[var(--color-primary-500)] p-2 rounded w-full 
+                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]"
                 required
               />
             </label>
@@ -72,14 +75,15 @@ const SignIn = () => {
               htmlFor="senha" 
               className="flex flex-col gap-1"
             >
-              <span className="font-medium">Senha</span>
+              <span className="font-medium text-[var(--color-primary-900)]">Senha</span>
               <input
                 id="senha"
                 type="password"
                 placeholder="Digite sua senha"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="border-1 p-2 rounded w-full"
+                className="border-2 border-[var(--color-primary-500)] p-2 rounded w-full
+                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]"
                 required
               />
             </label>
@@ -87,8 +91,8 @@ const SignIn = () => {
 
           <button
             type="submit"
-            className="bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-500)]
-            text-white p-2 rounded w-full transition duration-150 cursor-pointer"
+            className="bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-700)]
+            text-[var(--color-primary-50)] p-2 rounded w-full transition duration-150 cursor-pointer"
             disabled={submitting}
           >
             {submitting ? "Entrando..." : "Entrar"}
@@ -98,7 +102,7 @@ const SignIn = () => {
             <p className="text-sm text-[var(--color-error)] text-center">{error}</p>
           )}
 
-          <p className="text-sm">
+          <p className="text-sm text-[var(--color-primary-900)]">
             Não tem conta?
             <button
               onClick={() => navigate("/cadastro")}

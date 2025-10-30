@@ -6,28 +6,28 @@ import BeachCard from '../../components/Features/BeachCard';
 // Defina quantos cards você quer mostrar inicialmente
 const INITIAL_VISIBLE_COUNT = 5;
 
-// A constante CARDS_PER_LOAD não é mais necessária, pois agora mostramos tudo.
-
 const Beaches: React.FC = () => {
-  // 1. Estado para controlar o número de cards visíveis
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
-  // 2. Crie a lista de cards visíveis usando slice()
+  // Cria a lista de cards visíveis usando slice()
   const visibleBeaches = useMemo(() => {
     return beaches.slice(0, visibleCount);
   }, [visibleCount]);
 
-  // 3. Verifique se ainda há cards para mostrar
+  // Verifica se ainda há cards para mostrar
   const hasMore = visibleCount < beaches.length;
 
-  // 4. Função para carregar mais cards
+  // Função para carregar mais cards
   const handleLoadMore = () => {
-    // 💥 MUDANÇA AQUI: Define o número visível para o total de praias
+    // Define o número visível para o total de praias
     setVisibleCount(beaches.length);
   };
 
   return (
-    <div id='praias' className='pb-30'>
+    <div 
+      id='praias' 
+      className='pb-30'
+    >
       <h1 
         className='text-5xl text-center text-[var(--color-primary-700)] p-10'
       >

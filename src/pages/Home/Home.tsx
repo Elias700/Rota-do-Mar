@@ -63,19 +63,19 @@ function Home() {
 
           <p className="max-w-2xl mb-6 text-[var(--color-primary-50)]">
             O Rota do Mar é o seu guia digital para descobrir e aproveitar as
-            melhores praias da sua cidade. Aqui, você encontra informações
+            melhores praias de Salvador. Aqui, você encontra informações
             completas sobre cada praia.
           </p>
 
           <div className="relative w-full max-w-xl">
             <input
-              className="bg-[var(--color-primary-50)] text-[var(--color-primary-700)] 
-              font-mono ring-1 w-full focus:ring-2 focus:ring-[var(--color-primary-600)]
-              outline-none duration-300 placeholder:opacity-50 rounded-full px-4 py-2 
-              shadow-md focus:shadow-lg focus:shadow-blue-300"
+              className="bg-[var(--color-primary-50)] text-[var(--color-primary-500)] 
+              font-mono ring-1 w-full border-2 border-[var(--color-primary-500)] 
+              placeholder:text-[var(--color-primary-300)] outline-none duration-300
+              rounded-full px-4 py-2 shadow-md focus:shadow-lg *:focus:shadow-blue-300"
               placeholder="Pesquise sua praia preferida"
               name="search"
-              type="text"
+              type="text" 
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);

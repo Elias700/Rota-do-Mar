@@ -21,7 +21,9 @@ const Favorites: React.FC = () => {
 
         {favoriteBeaches.length === 0 ? (
           <div className="pb-16">
-            <p className="text-center text-[var(--color-primary-600)]">Você ainda não favoritou nenhuma praia.</p>
+            <p className="text-center text-[var(--color-error)] pt-5">
+              Você ainda não favoritou nenhuma praia.
+            </p>
           </div>
         ) : (
           <div className="flex flex-wrap gap-6 justify-center p-20">

@@ -13,7 +13,8 @@ const Contact = () => {
                             <input 
                                 type="text" 
                                 placeholder="Digite seu nome" 
-                                className="border-2 border-[var(--color-primary-700)] p-2 rounded pla w-full" 
+                                className="border-2 border-[var(--color-primary-700)] p-2 rounded pla w-full 
+                                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]" 
                                 required
                             />
                         </label>
@@ -23,7 +24,8 @@ const Contact = () => {
                             <input 
                                 type="email" 
                                 placeholder="Digite seu email"
-                                className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full"
+                                className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full 
+                                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]"
                                 required
                             />
                         </label>
@@ -33,7 +35,8 @@ const Contact = () => {
                             <input 
                                     type="tel" 
                                     placeholder="Digite seu celular"
-                                    className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full"
+                                    className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full 
+                                    placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]"
                                     required
                                 />
                         </label>
@@ -45,17 +48,19 @@ const Contact = () => {
                                 id="mensagem" 
                                 rows={4} 
                                 placeholder="Digite sua mensagem" 
-                                className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full" 
+                                className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full 
+                                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]" 
                                 required
                             >
                             </textarea>
                         </label>
                     </div>
+
                     <div className="flex flex-col items-center mt-8">
                         <button 
                             type="submit" 
                             className="bg-[var(--color-primary-600)] text-[var(--color-primary-50)] p-2 rounded w-full
-                            hover:bg-[var(--color-primary-500)] transition duration-[500ms] font-bold cursor-pointer"
+                            hover:bg-[var(--color-primary-800)] transition duration-[500ms] font-bold cursor-pointer"
                         >
                             Enviar mensagem
                         </button>

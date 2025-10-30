@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { useAuth } from "./AuthContext";
-import { getFavorites, toggleFavorite as svcToggleFavorite } from "../services/favorites";
+import { getFavorites, toggleFavorite as svcToggleFavorite } from "../Services/favorites";
 
 interface FavoritesContextValue {
   favorites: number[];
@@ -26,7 +26,7 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
 
   const toggleFavorite = useCallback(
     (id: number) => {
-      if (!user) return; // ignore if not logged
+      if (!user) return; 
       const nowFav = svcToggleFavorite(user.id, id);
       setFavorites((prev) => {
         if (nowFav) return Array.from(new Set([...prev, id]));

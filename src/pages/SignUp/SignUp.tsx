@@ -81,14 +81,16 @@ const SignUp: React.FC = () => {
         <div>
             <button
                 onClick={() => navigate("/")}
-                className="absolute top-5 left-5 text-[var(--color-primary-50)] hover:underline font-medium cursor-pointer"
+                className="absolute top-5 left-5 text-[var(--color-primary-50)] 
+                hover:underline font-medium cursor-pointer"
             >
                 Voltar para Página principal
             </button>
 
             <form
                 onSubmit={handleSubmit}
-                className="min-h-screen md:h-screen flex flex-col items-center justify-center gap-8 md:gap-10 bg-cover bg-center bg-no-repeat px-4"
+                className="min-h-screen md:h-screen flex flex-col items-center 
+                justify-center gap-8 md:gap-10 bg-cover bg-center bg-no-repeat px-4"
                 style={{
                     backgroundImage: `url(${backgroundImg})`,
                 }}
@@ -99,7 +101,10 @@ const SignUp: React.FC = () => {
                     alt="logo" 
                     className="h-28 md:h-40"    
                 />
-                <div className="flex flex-col w-full max-w-xs sm:max-w-md md:max-w-lg p-6 md:p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
+                <div 
+                    className="flex flex-col w-full max-w-xs sm:max-w-md md:max-w-lg 
+                    p-6 md:p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]"
+                >
                     <div className="flex flex-col gap-4">
                         <label>
                             <span className="font-medium">Nome</span>
@@ -110,10 +115,15 @@ const SignUp: React.FC = () => {
                                 onChange={(e) => setName(e.target.value)}
                                 onFocus={() => setFocusedField("name")}
                                 onBlur={() => setFocusedField(null)}
-                                className={`border-2 p-2 rounded w-full transition-all duration-300 focus:outline-none ${getBorderColor(
-                                    "name",
-                                    name
-                                )}`}
+                                className={
+                                    `border-2 p-2 rounded w-full transition-all duration-300 
+                                    focus:outline-none placeholder:text-[var(--color-primary-300)] 
+                                    text-[var(--color-primary-600)]
+                                    ${getBorderColor(
+                                        "name",
+                                        name
+                                    )}`
+                                }
                                 required
                             />
                         </label>
@@ -128,7 +138,9 @@ const SignUp: React.FC = () => {
                                 onFocus={() => setFocusedField("email")}
                                 onBlur={() => setFocusedField(null)}
                                 className={
-                                    `border-2 p-2 rounded w-full transition-all duration-300 focus:outline-none 
+                                    `border-2 p-2 rounded w-full transition-all duration-300
+                                    focus:outline-none placeholder:text-[var(--color-primary-300)] 
+                                    text-[var(--color-primary-600)]
                                     ${getBorderColor("email", email)
                                     }`}
                                 required
@@ -144,10 +156,13 @@ const SignUp: React.FC = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 onFocus={() => setFocusedField("password")}
                                 onBlur={() => setFocusedField(null)}
-                                className={`border-2 p-2 rounded w-full transition-all duration-300 focus:outline-none ${getBorderColor(
-                                    "password",
-                                    password
-                                )}`}
+                                className={
+                                    `border-2 p-2 rounded w-full transition-all duration-300
+                                    focus:outline-none placeholder:text-[var(--color-primary-300)]
+                                    ${getBorderColor(
+                                        "password",
+                                        password
+                                    )}`}
                                 required
                             />
                         </label>
@@ -161,10 +176,13 @@ const SignUp: React.FC = () => {
                                 onChange={(e) => setConfirm(e.target.value)}
                                 onFocus={() => setFocusedField("confirm")}
                                 onBlur={() => setFocusedField(null)}
-                                className={`border-2 p-2 rounded w-full transition-all duration-300 focus:outline-none ${getBorderColor(
-                                    "confirm",
-                                    confirm
-                                )}`}
+                                className={
+                                    `border-2 p-2 rounded w-full transition-all duration-300
+                                    focus:outline-none placeholder:text-[var(--color-primary-300)]
+                                    ${getBorderColor(
+                                        "confirm",
+                                        confirm
+                                    )}`}
                                 required
                             />
                         </label>
@@ -178,12 +196,12 @@ const SignUp: React.FC = () => {
                             onChange={(e) => setTerms(e.target.checked)}
                             className="h-4 w-4 text-[#37708C] border-gray-300 rounded focus:ring-[#37708C]"
                         />
-                        <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
+                        <label htmlFor="terms" className="ml-2 block text-sm text-[var(--color-primary-900)]">
                             Li e concordo com os
                             <button
                                 type="button" 
                                 onClick={() => setIsTermsModalOpen(true)} 
-                                className="text-[var(--color-primary-600)] hover:underline cursor-pointer font-medium ml-1"
+                                className="text-[var(--color-primary-500)] hover:underline cursor-pointer font-medium ml-1"
                             >
                                 termos de privacidade
                             </button>

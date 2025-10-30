@@ -17,29 +17,22 @@ const Footer = () => {
                         className="h-16 md:h-20"
                     />
                 </div>
-                <div >
-                    <ul className="p-5
-                        flex flex-wrap items-center justify-center gap-3 md:gap-6 
-                        [&>li]:text-base md:[&>li]:text-2xl 
-                        [&>li]:text-[var(--color-primary-700)] 
-                        [&>li]:hover:text-[var(--color-primary-900)]
-                        [&>li]:cursor-pointer"
-                    >
-                        <li>Home</li>
-                        <li>Praias</li>
-                        <li>Previsão do tempo</li>
-                        <li>Contato</li>
-                    </ul>
-                </div>
+                
                 <div className="flex justify-center gap-6 md:gap-8">
                     <FaSquareInstagram 
-                        className="text-[var(--color-primary-700)] text-3xl md:text-4xl hover:text-[var(--color-primary-900)] cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1"
+                        className="text-[var(--color-primary-700)] text-3xl md:text-4xl 
+                        hover:text-[var(--color-primary-900)] cursor-pointer transition duration-500 
+                        ease-in-out transform hover:-translate-y-1"
                     />
                     <FaFacebookSquare 
-                        className="text-[var(--color-primary-700)] text-3xl md:text-4xl hover:text-[var(--color-primary-900)] cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1"
+                        className="text-[var(--color-primary-700)] text-3xl md:text-4xl 
+                        hover:text-[var(--color-primary-900)] cursor-pointer transition duration-500
+                        ease-in-out transform hover:-translate-y-1"
                     />
                     <FaSquareXTwitter 
-                        className="text-[var(--color-primary-700)] text-3xl md:text-4xl hover:text-[var(--color-primary-900)] cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1"
+                        className="text-[var(--color-primary-700)] text-3xl md:text-4xl 
+                        hover:text-[var(--color-primary-900)] cursor-pointer transition 
+                        duration-500 ease-in-out transform hover:-translate-y-1"
                     />
                 </div>
                 <p className="text-center text-[var(--color-primary-700)] font-bold p-6 md:p-10 text-sm md:text-base">

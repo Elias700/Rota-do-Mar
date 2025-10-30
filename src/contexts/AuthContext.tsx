@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import type { Credentials, User, RegisterInput } from "../services/auth";
-import { getCurrentAuth, login as svcLogin, logout as svcLogout, register as svcRegister } from "../services/auth";
+import type { Credentials, User, RegisterInput } from "../Services/auth";
+import { getCurrentAuth, login as svcLogin, logout as svcLogout, register as svcRegister } from "../Services/auth";
 
 type AuthContextValue = {
   user: User | null;

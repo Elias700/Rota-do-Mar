@@ -34,7 +34,7 @@ const useWeather = (city: string, apiKey: string): WeatherHookResult => {
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = useCallback(async () => {
-    // SEMPRE COMEÇA RESETANDO ESTADOS 
+    // Sempre começa resetando estados
     setLoading(true); 
     setError(null);
 
