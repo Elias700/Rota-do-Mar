@@ -291,7 +291,7 @@ const SignUp: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate("/login")}
-                className="text-[var(--color-primary-100)] hover:underline font-medium ml-1"
+                className="text-[var(--color-primary-100)] hover:underline font-medium ml-1 cursor-pointer"
               >
                 Acessar
               </button>
@@ -300,7 +300,6 @@ const SignUp: React.FC = () => {
         </div>
       </form>
 
-      {/* Modal de Termos */}
       <ModalWelcome isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)}>
         <PrivacyTermsContent />
       </ModalWelcome>
