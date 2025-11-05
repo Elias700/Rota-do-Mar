@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { useAuth } from "./AuthContext";
-import { getFavorites, toggleFavorite as svcToggleFavorite } from "../Services/favorites";
+import { getFavorites, toggleFavorite as svcToggleFavorite } from "../services/favorites";
 
 interface FavoritesContextValue {
   favorites: number[];
