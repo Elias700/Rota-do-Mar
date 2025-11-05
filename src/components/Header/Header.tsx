@@ -148,13 +148,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              {/* <button
-                onClick={() => navigate("/favoritos")}
-                className="cursor-pointer px-8 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
-                text-[var(--color-primary-50)] font-medium shadow-md transition-colors hover:bg-[var(--color-primary-700)]"
-              >
-                Favoritos
-              </button> */}
+            
               <button
                 onClick={async () => { await logout(); navigate("/"); }}
                 className="cursor-pointer px-8 py-3 rounded-xl border-[1px] border-[var(--color-primary-50)] 
