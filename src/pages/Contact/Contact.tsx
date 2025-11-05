@@ -8,54 +8,91 @@ const Contact = () => {
                 <h1 className="text-center text-5xl text-[var(--color-primary-700)]  p-10">Contato</h1>
                 <div className="flex flex-col w-full max-w-xs sm:max-w-md p-8 rounded-lg shadow-lg bg-[var(--color-primary-50)]">
                     <div className="flex flex-col gap-4">
-                        <label>
-                            <span className="font-medium text-[var(--color-primary-700)]">Nome</span> 
-                            <input 
-                                type="text" 
-                                placeholder="Digite seu nome" 
-                                className="border-2 border-[var(--color-primary-700)] p-2 rounded pla w-full 
-                                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]" 
+                        <div className="relative"> 
+                            <input
+                                className="peer h-10 w-full border-b-2 border-[var(--color-primary-600)] 
+                                            text-[var(--color-primary-800)] focus:outline-none focus:border-[var(--color-primary-400)]"
+                                id="name"
+                                name="name"
+                                type="name"
+                                placeholder=" " 
                                 required
                             />
-                        </label>
-
-                        <label> 
-                            <span className="font-medium text-[var(--color-primary-700)]">Email</span> 
-                            <input 
-                                type="email" 
-                                placeholder="Digite seu email"
-                                className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full 
-                                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]"
-                                required
-                            />
-                        </label>
-
-                        <label>
-                            <span className="font-medium text-[var(--color-primary-700)]">Celular</span> 
-                            <input 
-                                    type="tel" 
-                                    placeholder="Digite seu celular"
-                                    className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full 
-                                    placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]"
-                                    required
-                                />
-                        </label>
-
-                        <label> 
-                            <span className="font-medium text-[var(--color-primary-700)]">Mensagem</span> 
-                            <textarea
-                                name="mensagem" 
-                                id="mensagem" 
-                                rows={4} 
-                                placeholder="Digite sua mensagem" 
-                                className="border-2 border-[var(--color-primary-700)] p-2 rounded w-full 
-                                placeholder:text-[var(--color-primary-300)] text-[var(--color-primary-500)]" 
-                                required
+                            <label
+                                htmlFor="name" 
+                                className="absolute left-0 -top-3.5 text-[var(--color-primary-300)] text-sm transition-all duration-300
+                                            peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-primary-400)]
+                                            peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-[var(--color-primary-600)]
+                                            peer-focus:text-sm"
                             >
-                            </textarea>
-                        </label>
-                    </div>
+                                Name
+                            </label>
+                        </div>
 
+                        <div className="relative">
+                            <input
+                                className="peer h-10 w-full border-b-2 border-[var(--color-primary-600)] 
+                                            text-[var(--color-primary-800)] focus:outline-none focus:border-[var(--color-primary-400)]"
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder=" " 
+                                required
+                            />
+                            <label
+                                htmlFor="email" 
+                                className="absolute left-0 -top-3.5 text-[var(--color-primary-300)] text-sm transition-all duration-300
+                                            peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-primary-400)]
+                                            peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-[var(--color-primary-600)]
+                                            peer-focus:text-sm"
+                            >
+                                Email
+                            </label>
+                        </div>
+
+                        <div className="relative">
+                            <input
+                                className="peer h-10 w-full border-b-2 border-[var(--color-primary-600)] 
+                                            text-[var(--color-primary-800)] focus:outline-none focus:border-[var(--color-primary-400)]"
+                                id="phone"
+                                name="phone"
+                                type="phone"
+                                placeholder=" " 
+                                required
+                            />
+                            <label
+                                htmlFor="phone" 
+                                className="absolute left-0 -top-3.5 text-[var(--color-primary-300)] text-sm transition-all duration-300
+                                            peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-primary-400)]
+                                            peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-[var(--color-primary-600)]
+                                            peer-focus:text-sm"
+                            >
+                                Celular
+                            </label>
+                        </div>
+
+                        <div className="relative">
+                            <textarea
+                                className="peer w-full h-24 resize-none border-b-2 border-[var(--color-primary-600)] 
+                                        text-[var(--color-primary-800)] bg-transparent focus:outline-none 
+                                        focus:border-[var(--color-primary-400)]"
+                                id="message"
+                                name="message"
+                                placeholder=" "
+                                required
+                            ></textarea>
+                            <label
+                                htmlFor="message"
+                                className="absolute left-0 -top-3.5 text-[var(--color-primary-300)] text-sm transition-all duration-300
+                                        peer-placeholder-shown:text-base peer-placeholder-shown:text-[var(--color-primary-400)]
+                                        peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-[var(--color-primary-600)]
+                                        peer-focus:text-sm"
+                            >
+                                Mensagem
+                            </label>
+                        </div>
+                    </div>
+                    
                     <div className="flex flex-col items-center mt-8">
                         <button 
                             type="submit" 
